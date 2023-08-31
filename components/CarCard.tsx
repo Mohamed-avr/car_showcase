@@ -1,18 +1,18 @@
-"use client"
-import { useState } from 'react';
-import Image from 'next/image';
+
+
+
 import { CarProps } from '@/types';
 import { calculateCarRent } from '@/utils'
-import { CustomButton } from './';
+
 
 interface CarCardProps {
     car: CarProps;
 }
 
-export default function CarCard({ car }: CarCardProps) {
-    const [first, setfirst] = useState()
+
+export default  function ({ car }: CarCardProps) {
     const { city_mpg, year, make, model, transmission, drive } = car;
-    const carRent = calculateCarRent(city_mpg, year);
+    // const carRent = calculateCarRent(city_mpg, year);
 
     return (
         <div className='car-card group'>
@@ -23,12 +23,12 @@ export default function CarCard({ car }: CarCardProps) {
             </div>
             <p className='flex mt-6 text-[32px] font-extrabold'> 
             <span className='self-start text-[14px] font-semibold'>$</span>
-            {carRent}
+            {/* {carRent} */}
             <span className='self-end text-[14px] font-medium'>/day</span>
             </p>
         </div>
     )
 }
 
-// stoped here : 1:34:46 
+
 
